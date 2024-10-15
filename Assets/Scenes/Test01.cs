@@ -5,6 +5,9 @@ using UnityEngine;
 public class Test01 : MonoBehaviour
 {
     public GameObject Target;
+
+    private float viewDistance = 3;
+    private float viewAngle = 120;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,25 +22,61 @@ public class Test01 : MonoBehaviour
         ////Debug.Log(v1 * 3);
         ////点积
         //Debug.Log(Vector3.Dot(v1, v2));
+
+        //Vector2 v1 = new Vector2(3, 3);
+        //Vector2 v2 = new Vector2(4, 0);
+        //Debug.Log(Vector2.Angle(v1, v2));
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 dir = Target.transform.position - transform.position;
 
-        float dot = Vector3.Dot(dir, transform.forward); // 点积 >0 两个向量锐角  =0 直角  < 0 钝角
-        if (dot > 0 )
+        if (Vector3.Distance(Target.transform.position, transform.position) <= viewDistance )
         {
-            Debug.Log("在正面");
+            //Debug.Log("满足距离！！");
+            Vector3 dir = Target.transform.position - transform.position;
+            float angle = Vector3.Angle(dir, transform.forward);
+            if (angle <= viewAngle / 2)
+            {
+                Debug.Log("在视野角度内");
+            }
         }
-        else if (dot == 0)
+        Debug.DrawLine(transform.position, transform.position + viewDistance * transform.forward, Color.red);
+
+        //float x = Mathf.Sin(viewAngle/2 * Mathf.Deg2Rad) * viewDistance;
+        //float z = Mathf.Cos(viewAngle/2 * Mathf.Deg2Rad) * viewDistance;
+        //Debug.DrawLine(transform.position, transform.TransformPoint(x, 0, z), Color.black);
+
+        //x = Mathf.Sin(-viewAngle / 2 * Mathf.Deg2Rad) * viewDistance;
+        //z = Mathf.Cos(-viewAngle / 2 * Mathf.Deg2Rad) * viewDistance;
+        //Debug.DrawLine(transform.position, transform.TransformPoint(x, 0, z), Color.blue);
+
+        for (float i = -viewAngle /2; i < viewAngle/2; i+=10)
         {
-            Debug.Log("在两侧");
+            float x = Mathf.Sin(i  * Mathf.Deg2Rad) * viewDistance;
+            float z = Mathf.Cos(i  * Mathf.Deg2Rad) * viewDistance;
+            Debug.DrawLine(transform.position, transform.TransformPoint(x, 0, z), Color.black);
+
+
         }
-        else if (dot < 0)
-        {
-            Debug.Log("在后面");
-        }
+
+        //Vector3 dir = Target.transform.position - transform.position;
+
+        //float dot = Vector3.Dot(dir, transform.forward); // 点积 >0 两个向量锐角  =0 直角  < 0 钝角
+        //if (dot > 0 )
+        //{
+        //    Debug.Log("在正面");
+        //}
+        //else if (dot == 0)
+        //{
+        //    Debug.Log("在两侧");
+        //}
+        //else if (dot < 0)
+        //{
+        //    Debug.Log("在后面");
+        //}
     }
 }
