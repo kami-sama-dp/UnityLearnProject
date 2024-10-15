@@ -33,17 +33,17 @@ public class Test01 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Vector3.Distance(Target.transform.position, transform.position) <= viewDistance )
-        {
-            //Debug.Log("满足距离！！");
-            Vector3 dir = Target.transform.position - transform.position;
-            float angle = Vector3.Angle(dir, transform.forward);
-            if (angle <= viewAngle / 2)
-            {
-                Debug.Log("在视野角度内");
-            }
-        }
+        transform.Translate(Vector3.forward * Time.deltaTime * 5);
+        //if (Vector3.Distance(Target.transform.position, transform.position) <= viewDistance )
+        //{
+        //    //Debug.Log("满足距离！！");
+        //    Vector3 dir = Target.transform.position - transform.position;
+        //    float angle = Vector3.Angle(dir, transform.forward);
+        //    if (angle <= viewAngle / 2)
+        //    {
+        //        Debug.Log("在视野角度内");
+        //    }
+        //}
         Debug.DrawLine(transform.position, transform.position + viewDistance * transform.forward, Color.red);
 
         //float x = Mathf.Sin(viewAngle/2 * Mathf.Deg2Rad) * viewDistance;
@@ -54,14 +54,14 @@ public class Test01 : MonoBehaviour
         //z = Mathf.Cos(-viewAngle / 2 * Mathf.Deg2Rad) * viewDistance;
         //Debug.DrawLine(transform.position, transform.TransformPoint(x, 0, z), Color.blue);
 
-        for (float i = -viewAngle /2; i < viewAngle/2; i+=10)
-        {
-            float x = Mathf.Sin(i  * Mathf.Deg2Rad) * viewDistance;
-            float z = Mathf.Cos(i  * Mathf.Deg2Rad) * viewDistance;
-            Debug.DrawLine(transform.position, transform.TransformPoint(x, 0, z), Color.black);
+        //for (float i = -viewAngle /2; i < viewAngle/2; i+=10)
+        //{
+        //    float x = Mathf.Sin(i  * Mathf.Deg2Rad) * viewDistance;
+        //    float z = Mathf.Cos(i  * Mathf.Deg2Rad) * viewDistance;
+        //    Debug.DrawLine(transform.position, transform.TransformPoint(x, 0, z), Color.black);
 
 
-        }
+        //}
 
         //Vector3 dir = Target.transform.position - transform.position;
 
