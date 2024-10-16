@@ -11,6 +11,7 @@ public class Test02 : MonoBehaviour
     void Start()
     {
         float distance = Mathf.Lerp(0, 10, 0.2f);
+        
     }
 
     // Update is called once per frame
@@ -28,6 +29,7 @@ public class Test02 : MonoBehaviour
 
         obj01.position = Vector3.Lerp(obj01.position, obj02.position, 0.1f);
 
+        float pos = Mathf.Lerp(5, 10, 0.2f);
     }
 
     public static float MyLerp(float a, float b , float t)
