@@ -61,6 +61,7 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2023.2.20f1c1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scenes/Test03.cs" />
     <Compile Include="Assets/Scenes/Test02.cs" />
     <Compile Include="Assets/Scenes/Test01.cs" />
   </ItemGroup>

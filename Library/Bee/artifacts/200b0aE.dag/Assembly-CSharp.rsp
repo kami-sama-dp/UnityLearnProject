@@ -384,6 +384,7 @@
 -analyzer:"/Applications/Unity/Hub/Editor/2023.2.20f1c1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/Scenes/Test01.cs"
 "Assets/Scenes/Test02.cs"
+"Assets/Scenes/Test03.cs"
 -langversion:9.0
 
 /deterministic

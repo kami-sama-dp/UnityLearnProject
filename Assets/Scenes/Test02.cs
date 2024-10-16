@@ -6,6 +6,9 @@ public class Test02 : MonoBehaviour
 {
     public Transform obj01;
     public Transform obj02;
+    public float offset = 0;
+    public float timer = 0;
+    public float reachingTime = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -27,9 +30,17 @@ public class Test02 : MonoBehaviour
         // 世界坐标
         Vector3 point = transform.TransformPoint(x, 0, z);
 
-        obj01.position = Vector3.Lerp(obj01.position, obj02.position, 0.1f);
+        //obj01.position = Vector3.Lerp(obj01.position, obj02.position, 0.1f);
 
-        float pos = Mathf.Lerp(5, 10, 0.2f);
+        offset += Time.deltaTime /5;
+        float pos = Mathf.Lerp(5, 10, offset);
+
+        timer += Time.deltaTime;
+        if (timer > 1)
+        {
+            Debug.Log(pos);
+            timer = 0;
+        }
     }
 
     public static float MyLerp(float a, float b , float t)
