@@ -385,6 +385,7 @@
 "Assets/Scenes/Test01.cs"
 "Assets/Scenes/Test02.cs"
 "Assets/Scenes/Test03.cs"
+"Assets/Scenes/Test04.cs"
 -langversion:9.0
 
 /deterministic

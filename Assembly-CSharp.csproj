@@ -64,6 +64,7 @@
     <Compile Include="Assets/Scenes/Test03.cs" />
     <Compile Include="Assets/Scenes/Test02.cs" />
     <Compile Include="Assets/Scenes/Test01.cs" />
+    <Compile Include="Assets/Scenes/Test04.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
