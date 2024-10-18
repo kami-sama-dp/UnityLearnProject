@@ -20,12 +20,21 @@ public class Test05 : MonoBehaviour
 
         if (h != 0 || v != 0)
         {
-            Vector3 moveDir = new Vector3(transform.position.x + h, 0,transform.position.z + v);
+            //Vector3 moveDir = new Vector3(transform.position.x + h, 0,transform.position.z + v);
 
-            transform.LookAt(moveDir);
+            //transform.LookAt(moveDir);
+            //characterController.Move(transform.forward * Time.deltaTime);
+
+            //transform.Rotate(0, h * 100 * Time.deltaTime, 0);
+            //characterController.Move(v * transform.forward *  Time.deltaTime);
 
 
-            characterController.Move(transform.forward * Time.deltaTime);
+            Vector3 moveDir = new Vector3(h, 0, v);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(moveDir), 0.05f);
+
+
+
+       
 
         }
 
