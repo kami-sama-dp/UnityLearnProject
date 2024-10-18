@@ -30,7 +30,7 @@ public class Test05 : MonoBehaviour
 
 
             Vector3 moveDir = new Vector3(h, 0, v);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(moveDir), 0.05f);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(moveDir), 0.05f );
 
 
 
@@ -39,5 +39,16 @@ public class Test05 : MonoBehaviour
         }
 
 
+    }
+
+    //  普通的碰撞检查函数可以使用
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("OnCollisionEnter");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("OnTriggerEnter");
     }
 }
