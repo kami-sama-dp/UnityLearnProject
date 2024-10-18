@@ -1,8 +1,7 @@
 ﻿<Properties StartupConfiguration="{32C3BDE6-E125-3128-82C1-25D0441455A3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/Test04.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Assets/Scenes/Test03.cs" Line="34" Column="1" />
-      <File FileName="Assets/Scenes/Test04.cs" Line="12" Column="40" />
+      <File FileName="Assets/Scenes/Test05.cs" Line="7" Column="21" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,7 +9,7 @@
           <Node name="My project" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scenes" expanded="True">
-                <Node name="Test04.cs" selected="True" />
+                <Node name="Test05.cs" selected="True" />
               </Node>
             </Node>
           </Node>

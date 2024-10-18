@@ -37,7 +37,7 @@ public class Test04 : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log(Input.mousePosition );
+            Debug.Log(Input.mousePosition);
             Vector3 mousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y,
                 Vector3.Distance(transform.position, obj.transform.position));
 
@@ -45,5 +45,9 @@ public class Test04 : MonoBehaviour
 
             Instantiate(obj, obj_pos, Quaternion.identity);
         }
+
+        float v = Input.GetAxis("Vertical");
+        float h = Input.GetAxis("Horizontal");
+        transform.Translate(new Vector3(h, 0, v) * Time.deltaTime * 2);
     }
 }
