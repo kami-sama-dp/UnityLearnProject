@@ -5,16 +5,21 @@ using UnityEngine;
 public class Test05 : MonoBehaviour
 {
     public CharacterController characterController;
+    public Animator animator;
+    public float speed;
+     
     // Start is called before the first frame update
     void Start()
     {
         characterController = this.GetComponent<CharacterController >();
+        animator = this.GetComponent<Animator>();
        
     }
 
     // Update is called once per frame
     void Update()
     {
+       
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
@@ -30,11 +35,25 @@ public class Test05 : MonoBehaviour
 
 
             Vector3 moveDir = new Vector3(h, 0, v);
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(moveDir), 0.05f );
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(moveDir), 0.05f);
 
 
+            animator.SetFloat("speend", 0.3f);
+            if (Input.GetKey(KeyCode.Q))
+            {
+                speed = 10;
+                animator.SetFloat("speend", 1);
+            }
+            else
+            {
+                speed = 5;
+            }
 
-       
+
+        }
+        else
+        {
+            animator.SetFloat("speend", 0 );
 
         }
 
