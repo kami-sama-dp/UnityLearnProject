@@ -27,4 +27,13 @@ public class TestEditor : MonoBehaviour
         PlayerHealth playerHealth = cmd.context as PlayerHealth;
         playerHealth.ShowMsg();
     }
+
+    [DrawGizmo(GizmoType.Active | GizmoType.Selected)]
+    public static void MyCustomOnDrawGizmo(PlayerHealth playerHealth, GizmoType gizmoType)
+    {
+        var color = Gizmos.color;
+        Gizmos.color = Color.black;
+        Gizmos.DrawCube(playerHealth.transform.position, Vector3.one +  Vector3.one);
+        Gizmos.color = color;
+    }
 }
