@@ -65,7 +65,7 @@ public class TextureEditor : MonoBehaviour
         targetObj = Selection.activeObject;
         string path = AssetDatabase.GetAssetPath(targetObj);
         path = System.Text.RegularExpressions.Regex.Replace(path, "Assets/Resources/", "");
-        GUIUtility.systemCopyBuffer = path;
+        GUIUtility.systemCopyBuffer = path; 
     }
 
 }

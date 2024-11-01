@@ -390,6 +390,7 @@
 "Assets/Scenes/Test04.cs"
 "Assets/Scenes/Test05.cs"
 "Assets/TextureEditor.cs"
+"Assets/YeWuTeXing.cs"
 -langversion:9.0
 
 /deterministic

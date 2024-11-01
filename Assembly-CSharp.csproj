@@ -67,6 +67,7 @@
     <Compile Include="Assets/Scenes/Test05.cs" />
     <Compile Include="Assets/Scenes/Test01.cs" />
     <Compile Include="Assets/TextureEditor.cs" />
+    <Compile Include="Assets/YeWuTeXing.cs" />
     <Compile Include="Assets/PlayerHealth.cs" />
     <Compile Include="Assets/Scenes/Test04.cs" />
   </ItemGroup>

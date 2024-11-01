@@ -34,6 +34,6 @@ public class TestEditor : MonoBehaviour
         var color = Gizmos.color;
         Gizmos.color = Color.black;
         Gizmos.DrawCube(playerHealth.transform.position, Vector3.one +  Vector3.one);
-        Gizmos.color = color;
+        Gizmos.color = color; 
     }
 }
