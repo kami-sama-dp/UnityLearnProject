@@ -10,6 +10,8 @@ public class DaGeAction : MonoBehaviour
 
     public float movePerUpdate = 0;
 
+    public string story = "故事内容";
+
     private float getHurtCd = 2;
 
     [SerializeField]
@@ -35,6 +37,5 @@ public class DaGeAction : MonoBehaviour
         Debug.Log(moveValue);
         movePerUpdate = moveValue.magnitude;
         transform.Translate(moveValue, Space.Self);
-
     }
 }
