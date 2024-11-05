@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Editor/TestEditor.cs" />
+    <Compile Include="Assets/Editor/DaGeMianBan.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

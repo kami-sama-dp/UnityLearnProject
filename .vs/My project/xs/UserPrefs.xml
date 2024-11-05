@@ -1,16 +1,19 @@
 ﻿<Properties StartupConfiguration="{32C3BDE6-E125-3128-82C1-25D0441455A3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/YeWuTeXing.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DaGeAction.cs">
     <Files>
-      <File FileName="Assets/Scripts/DaGeAction.cs" Line="33" Column="28" />
-      <File FileName="Assets/YeWuTeXing.cs" Line="25" Column="1" />
+      <File FileName="Assets/Scripts/DaGeAction.cs" Line="14" Column="1" />
+      <File FileName="Assets/YeWuTeXing.cs" Line="34" Column="23" />
+      <File FileName="Assets/Editor/DaGeMianBan.cs" Line="6" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="My project" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True" />
-              <Node name="YeWuTeXing.cs" selected="True" />
+              <Node name="Editor" expanded="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="DaGeAction.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
